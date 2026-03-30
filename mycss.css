@@ -1,0 +1,51 @@
+:root{
+--turkish-red: #e30a17;
+--soft-red: #ff4d4d;
+--dark-text: #222;
+}
+
+.bg-red { background-color: var(--turkish-red) !important; }
+.hero {
+background: linear-gradient(180deg, rgba(227,10,23,0.95), rgba(227,10,23,0.85));
+padding-top: 4rem;
+padding-bottom: 4rem;
+}
+
+/* Main text */
+body { color: var(--dark-text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+/* Progress bars: make them taller and animate smoothly */
+.custom-progress { height: 28px; background: rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden; }
+.custom-progress .progress-bar {
+transition: width 1.2s ease;
+color: var(--turkish-red);
+font-weight: 600;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.custom-progress .progress-bar.bg-light { background: rgba(255,255,255,0.95); color: var(--turkish-red); }
+
+.timeline { border-left: 3px solid var(--turkish-red); padding-left: 1rem; }
+.timeline-item { position: relative; margin-bottom: 1.5rem; padding-left: 1rem; }
+.timeline-item::before {
+content: "";
+width: 12px;
+height: 12px;
+background: var(--turkish-red);
+border-radius: 50%;
+position: absolute;
+left: -7px;
+top: 4px;
+box-shadow: 0 0 0 4px rgba(227,10,23,0.08);
+}
+.timeline-date { font-weight: 700; color: var(--turkish-red); margin-bottom: 0.25rem; }
+
+img[alt="placeholder"] { background: #f8f9fa; min-height:80px; object-fit:cover; }
+
+/* Small responsive tweak */
+@media (max-width:576px){
+.hero { padding-top:3rem; padding-bottom:3rem; }
+.custom-progress { height: 24px; }
+}
